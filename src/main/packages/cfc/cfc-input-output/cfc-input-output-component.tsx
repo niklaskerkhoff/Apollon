@@ -1,0 +1,25 @@
+import { ThemedRect } from '../../../components/theme/themedComponents';
+import { Text } from '../../../components/controls/text/text';
+import React from 'react';
+import { CfcInputOutput } from './cfc-input-output';
+import { CfcCounter } from '../base/cfc-counter';
+
+/**
+ * Component for rendering an input or an output element in a cfc.
+ * Displays a rectangle with the title centered inside and the counter on the top right.
+ */
+export function CfcInputOutputComponent({ element }: { element: CfcInputOutput }) {
+  const { title, counter } = JSON.parse(element.name);
+
+  return (
+    <g>
+      <ThemedRect fillColor={element.fillColor} strokeColor="none" x="0" y="0" width="100%" height="100%" />
+      <Text fill={element.textColor} textAnchor="middle" dominantBaseline="middle">
+        {title}
+      </Text>
+      <ThemedRect x="0" y="0" fillColor="none" width="100%" height="100%" strokeColor={element.strokeColor} />
+
+      <CfcCounter element={element} counter={counter} />
+    </g>
+  );
+}

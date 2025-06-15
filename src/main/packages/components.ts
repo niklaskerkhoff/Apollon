@@ -63,6 +63,11 @@ import { BPMNGroupComponent } from './bpmn/bpmn-group/bpmn-group-component';
 import { BPMNPoolComponent } from './bpmn/bpmn-pool/bpmn-pool-component';
 import { BPMNSwimlaneComponent } from './bpmn/bpmn-swimlane/bpmn-swimlane-component';
 import { BPMNDataStoreComponent } from './bpmn/bpmn-data-store/bpmn-data-store-component';
+import { CfcInputOutputComponent } from './cfc/cfc-input-output/cfc-input-output-component';
+import { CfcOperationComponent } from './cfc/cfc-operation/cfc-operation-component';
+import { CfcOperationRowComponent } from './cfc/cfc-operation-row/cfc-operation-row-component';
+import { CfcTransitionBranchComponent } from './cfc/cfc-transition-branch/cfc-transition-branch-component';
+import { CfcTransitionComponent } from './cfc/cfc-transition/cfc-transition-component';
 
 export const Components: {
   [key in UMLElementType | UMLRelationshipType]:
@@ -123,6 +128,10 @@ export const Components: {
   [UMLElementType.BPMNPool]: BPMNPoolComponent,
   [UMLElementType.BPMNSwimlane]: BPMNSwimlaneComponent,
   [UMLElementType.BPMNGroup]: BPMNGroupComponent,
+  [UMLElementType.CfcInputOutput]: CfcInputOutputComponent,
+  [UMLElementType.CfcOperation]: CfcOperationComponent,
+  [UMLElementType.CfcOperationRow]: CfcOperationRowComponent,
+  [UMLElementType.CfcTransitionBranch]: CfcTransitionBranchComponent,
   [UMLRelationshipType.ClassAggregation]: UMLAssociationComponent,
   [UMLRelationshipType.ClassBidirectional]: UMLAssociationComponent,
   [UMLRelationshipType.ClassComposition]: UMLAssociationComponent,
@@ -149,4 +158,5 @@ export const Components: {
   [UMLRelationshipType.SyntaxTreeLink]: SyntaxTreeLinkComponent,
   [UMLRelationshipType.FlowchartFlowline]: FlowchartFlowlineComponent,
   [UMLRelationshipType.BPMNFlow]: BPMNFlowComponent,
+  [UMLRelationshipType.CfcTransition]: CfcTransitionComponent,
 };

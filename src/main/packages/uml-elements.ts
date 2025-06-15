@@ -53,6 +53,10 @@ import { BPMNPool } from './bpmn/bpmn-pool/bpmn-pool';
 import { BPMNSwimlane } from './bpmn/bpmn-swimlane/bpmn-swimlane';
 import { BPMNGroup } from './bpmn/bpmn-group/bpmn-group';
 import { BPMNDataStore } from './bpmn/bpmn-data-store/bpmn-data-store';
+import { CfcInputOutput } from './cfc/cfc-input-output/cfc-input-output';
+import { CfcOperation } from './cfc/cfc-operation/cfc-operation';
+import { CfcOperationRow } from './cfc/cfc-operation-row/cfc-operation-row';
+import { CfcTransitionBranch } from './cfc/cfc-transition-branch/cfc-transition-branch';
 
 export const UMLElements = {
   [UMLElementType.Package]: UMLClassPackage,
@@ -109,4 +113,8 @@ export const UMLElements = {
   [UMLElementType.BPMNPool]: BPMNPool,
   [UMLElementType.BPMNSwimlane]: BPMNSwimlane,
   [UMLElementType.BPMNGroup]: BPMNGroup,
+  [UMLElementType.CfcInputOutput]: CfcInputOutput,
+  [UMLElementType.CfcOperation]: CfcOperation,
+  [UMLElementType.CfcOperationRow]: CfcOperationRow,
+  [UMLElementType.CfcTransitionBranch]: CfcTransitionBranch,
 };
