@@ -8,7 +8,7 @@ interface Props {
   counter: string;
 }
 
-export function CfcCounter({ element, counter }: Props) {
+export const CfcCounter = ({ element, counter }: Props) => {
   if (!counter || counter.length === 0) return <></>;
 
   const elementWidth = element.bounds.width;
@@ -38,4 +38,4 @@ export function CfcCounter({ element, counter }: Props) {
       </Text>
     </>
   );
-}
+};

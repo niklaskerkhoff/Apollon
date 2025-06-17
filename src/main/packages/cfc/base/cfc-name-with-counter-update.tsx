@@ -26,7 +26,7 @@ interface DispatchProps {
 
 type Props = OwnProps & DispatchProps & I18nContext;
 
-function BaseCfcNameWithCounterUpdate({ element, update }: Props) {
+const BaseCfcNameWithCounterUpdate = ({ element, update }: Props) => {
   const [colorOpen, setColorOpen] = React.useState(false);
 
   const { title, counter } = JSON.parse(element.name);
@@ -61,7 +61,7 @@ function BaseCfcNameWithCounterUpdate({ element, update }: Props) {
       </section>
     </div>
   );
-}
+};
 
 const enhance = compose<ComponentClass<OwnProps>>(
   localized,

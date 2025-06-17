@@ -16,7 +16,7 @@ interface Props {
  * Component for rendering a row within cfc operation.
  * Displays a row with an input label and an output label.
  */
-function BaseCfcOperationRowComponent({ element, fillColor, canvas }: Props) {
+const BaseCfcOperationRowComponent = ({ element, fillColor, canvas }: Props) => {
   const { inputLabel, outputLabel } = JSON.parse(element.name);
 
   const outputLabelWidth = TextUtils.size(canvas, outputLabel, { fontWeight: 'normal' }).width;
@@ -32,10 +32,8 @@ function BaseCfcOperationRowComponent({ element, fillColor, canvas }: Props) {
       <Text x={outputLabelX} textAnchor="start" fill={element.textColor} fontWeight="normal">
         {outputLabel}
       </Text>
-
-      {!element.owner && <ThemedRect fillColor="none" width="100%" height="100%" strokeColor={element.strokeColor} />}
     </g>
   );
-}
+};
 
 export const CfcOperationRowComponent = withCanvas(BaseCfcOperationRowComponent);

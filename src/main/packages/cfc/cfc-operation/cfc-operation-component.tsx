@@ -13,7 +13,7 @@ interface Props {
  * Component for rendering a row within cfc operation.
  * Displays a row with an input label and an output label.
  */
-export function CfcOperationComponent({ element, children }: Props) {
+export const CfcOperationComponent = ({ element, children }: Props) => {
   const { title, counter } = JSON.parse(element.name ?? '{}');
   const numberOfLines = Math.floor(element.bounds.height / 30) - 1;
   const horizontalLines = Array.from({ length: numberOfLines }, (_, index) => (index + 1) * 30);
@@ -35,4 +35,4 @@ export function CfcOperationComponent({ element, children }: Props) {
       <CfcCounter element={element} counter={counter} />
     </g>
   );
-}
+};

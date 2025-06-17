@@ -5,7 +5,7 @@ import { CfcTransition } from './cfc-transition';
 /**
  * Component for rendering transitions in cfc.
  */
-export function CfcTransitionComponent({ element }: { element: CfcTransition }) {
+export const CfcTransitionComponent = ({ element }: { element: CfcTransition }) => {
   return (
     <g>
       <ThemedPolyline
@@ -16,4 +16,4 @@ export function CfcTransitionComponent({ element }: { element: CfcTransition }) 
       />
     </g>
   );
-}
+};

@@ -8,7 +8,7 @@ import { CfcCounter } from '../base/cfc-counter';
  * Component for rendering an input or an output element in a cfc.
  * Displays a rectangle with the title centered inside and the counter on the top right.
  */
-export function CfcInputOutputComponent({ element }: { element: CfcInputOutput }) {
+export const CfcInputOutputComponent = ({ element }: { element: CfcInputOutput }) => {
   const { title, counter } = JSON.parse(element.name);
 
   return (
@@ -22,4 +22,4 @@ export function CfcInputOutputComponent({ element }: { element: CfcInputOutput }
       <CfcCounter element={element} counter={counter} />
     </g>
   );
-}
+};
