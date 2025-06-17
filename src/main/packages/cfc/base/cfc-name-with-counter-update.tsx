@@ -71,7 +71,8 @@ const enhance = compose<ComponentClass<OwnProps>>(
 );
 
 /**
- * Component for updating the name of a cfc element.
- * Provides a text field for editing the name and a color button for styling.
+ * Component for updating the name and counter of a CFC element.
+ * Provides text fields for editing the title and counter values, along with a color button for styling.
+ * The component parses and updates the JSON-structured name property of CFC elements.
  */
 export const CfcNameWithCounterUpdate = enhance(BaseCfcNameWithCounterUpdate);

@@ -10,8 +10,9 @@ interface Props {
 }
 
 /**
- * Component for rendering a row within cfc operation.
- * Displays a row with an input label and an output label.
+ * Component for rendering an operation element in Continuous Function Charts (CFC).
+ * Displays a container with a title at the top, horizontal dividing lines for rows,
+ * and an optional counter badge. Child components (operation rows) are rendered within this container.
  */
 export const CfcOperationComponent = ({ element, children }: Props) => {
   const { title, counter } = JSON.parse(element.name ?? '{}');

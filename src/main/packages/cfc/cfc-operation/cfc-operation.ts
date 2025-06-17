@@ -7,8 +7,10 @@ import { UMLContainer } from '../../../services/uml-container/uml-container';
 import { ILayoutable } from '../../../services/layouter/layoutable';
 
 /**
- * Represents an operation in cfc.
- * Contains rows to be connected with inputs and outputs.
+ * Represents an operation element in Continuous Function Charts (CFC).
+ * This container class manages operation blocks that can be connected with input and output variables.
+ * It automatically adjusts its width based on the title and child elements, and manages the vertical
+ * positioning of its child rows. Operations are the core processing elements in CFC diagrams.
  */
 export class CfcOperation extends UMLContainer {
   static features: UMLElementFeatures = {

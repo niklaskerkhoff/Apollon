@@ -12,10 +12,6 @@ interface Props {
   canvas: ILayer;
 }
 
-/**
- * Component for rendering a row within cfc operation.
- * Displays a row with an input label and an output label.
- */
 const BaseCfcOperationRowComponent = ({ element, fillColor, canvas }: Props) => {
   const { inputLabel, outputLabel } = JSON.parse(element.name);
 
@@ -36,4 +32,10 @@ const BaseCfcOperationRowComponent = ({ element, fillColor, canvas }: Props) => 
   );
 };
 
+/**
+ * Component for rendering a row within an operation element in Continuous Function Charts (CFC).
+ * Displays a row with an input label on the left side and an output label on the right side.
+ * The component calculates the position of the output label based on its width and the element's bounds.
+ * Enhanced with canvas context for text measurement and positioning.
+ */
 export const CfcOperationRowComponent = withCanvas(BaseCfcOperationRowComponent);

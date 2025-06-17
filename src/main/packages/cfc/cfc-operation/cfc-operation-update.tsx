@@ -155,7 +155,9 @@ const enhance = compose<ComponentClass<OwnProps>>(
 );
 
 /**
- * Component for editing title, counter, and rows in a cfc operation.
- * Provides a grid interface for adding, editing, and deleting rows.
+ * Component for editing properties of an operation element in Continuous Function Charts (CFC).
+ * Provides a user interface for modifying the operation's title and counter, as well as
+ * managing input/output rows within the operation. Features include adding new rows,
+ * editing existing row labels, and deleting rows through a grid-based interface.
  */
 export const CfcOperationUpdate = enhance(BaseCfcOperationUpdate);

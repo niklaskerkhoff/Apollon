@@ -20,8 +20,9 @@ type Props = {
 };
 
 /**
- * Component for providing control buttons for action table rows.
- * Includes color styling and delete functionality for each row.
+ * Component for providing control buttons for operation rows in Continuous Function Charts (CFC).
+ * Renders a set of controls including a color button for styling the row and a delete button
+ * for removing the row from its parent operation. Opens a style pane when the color button is clicked.
  */
 export const CfcOperationUpdateRowControls = ({ row, update, onDelete }: Props) => {
   const [colorOpen, setColorOpen] = useState(false);

@@ -4,8 +4,10 @@ import { Text } from '../../../components/controls/text/text';
 import { CfcTransitionBranch } from './cfc-transition-branch';
 
 /**
- * Component for rendering a transition branch in a cfc.
- * Displays a circular junction point where transitions can converge or diverge.
+ * Component for rendering a transition branch (junction point) in Continuous Function Charts (CFC).
+ * Displays a circular node that serves as a connection point where multiple transitions can
+ * converge or diverge. When used in preview mode (identified by a special x-coordinate),
+ * it also displays the branch name below the circle.
  */
 export const CfcTransitionBranchComponent = ({ element }: { element: CfcTransitionBranch }) => {
   return (

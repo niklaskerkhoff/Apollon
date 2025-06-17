@@ -8,6 +8,10 @@ interface Props {
   counter: string;
 }
 
+/**
+ * Component that renders a counter badge for CFC elements.
+ * Displays a rounded rectangle with the counter value in the top-right corner of the element.
+ */
 export const CfcCounter = ({ element, counter }: Props) => {
   if (!counter || counter.length === 0) return <></>;
 

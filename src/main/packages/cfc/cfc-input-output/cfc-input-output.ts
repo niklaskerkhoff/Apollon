@@ -8,7 +8,9 @@ import { UMLElement } from '../../../services/uml-element/uml-element';
 import { computeDimension, IBoundary } from '../../../utils/geometry/boundary';
 
 /**
- * Represents an input or an output in cfc.
+ * Represents an input or output variable element in Continuous Function Charts (CFC).
+ * This class handles the rendering and sizing of variable elements that can be connected
+ * to CFC operations. The element automatically adjusts its width based on the title text.
  */
 export class CfcInputOutput extends UMLElement {
   static features: UMLElementFeatures = {

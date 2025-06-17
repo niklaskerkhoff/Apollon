@@ -6,8 +6,10 @@ import { UMLContainer } from '../../../services/uml-container/uml-container';
 import { UMLElement } from '../../../services/uml-element/uml-element';
 
 /**
- * Represents a transition branch in a cfc.
- * A junction point where multiple transitions can converge or diverge.
+ * Represents a transition branch (junction point) in Continuous Function Charts (CFC).
+ * This element serves as a node where multiple transitions can converge or diverge,
+ * allowing for the creation of complex flow patterns in CFC diagrams. The branch
+ * has a fixed size of 20x20 pixels and cannot be resized or updated by the user.
  */
 export class CfcTransitionBranch extends UMLElement {
   static features: UMLElementFeatures = {

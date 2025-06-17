@@ -6,8 +6,10 @@ import { UMLElement } from '../../../services/uml-element/uml-element';
 import { computeDimension, IBoundary } from '../../../utils/geometry/boundary';
 
 /**
- * Represents a row in a cfc operation.
- * Contains an action identifier and description.
+ * Represents a row within an operation element in Continuous Function Charts (CFC).
+ * Each row can have input and output connections to other CFC elements and displays
+ * input/output labels. Rows are contained within CfcOperation elements and have a fixed height.
+ * The row is connectable, allowing transitions to be drawn to and from it.
  */
 export class CfcOperationRow extends UMLElement {
   static features: UMLElementFeatures = {

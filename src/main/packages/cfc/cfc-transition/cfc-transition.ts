@@ -3,7 +3,9 @@ import { UMLRelationshipType } from '../../uml-relationship-type';
 import { UMLRelationshipFeatures } from '../../../services/uml-relationship/uml-relationship-features';
 
 /**
- * Represents a transition between elements in a cfc.
+ * Represents a transition (connection) between elements in Continuous Function Charts (CFC).
+ * Transitions connect operation rows with input/output variables or other operations,
+ * showing the flow of data or control in the CFC diagram.
  */
 export class CfcTransition extends UMLRelationship {
   static features: UMLRelationshipFeatures = {

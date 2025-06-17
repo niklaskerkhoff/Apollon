@@ -5,8 +5,9 @@ import { CfcInputOutput } from './cfc-input-output';
 import { CfcCounter } from '../base/cfc-counter';
 
 /**
- * Component for rendering an input or an output element in a cfc.
- * Displays a rectangle with the title centered inside and the counter on the top right.
+ * Component for rendering an input or output variable element in Continuous Function Charts (CFC).
+ * Displays a styled rectangle with the variable title centered inside and an optional counter badge
+ * in the top-right corner. Uses themed components for consistent styling with the application.
  */
 export const CfcInputOutputComponent = ({ element }: { element: CfcInputOutput }) => {
   const { title, counter } = JSON.parse(element.name);
