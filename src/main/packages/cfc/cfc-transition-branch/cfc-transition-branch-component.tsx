@@ -11,9 +11,11 @@ export function CfcTransitionBranchComponent({ element }: { element: CfcTransiti
   return (
     <g>
       <ThemedCircleContrast cx="10" cy="10" r="10" strokeColor="none" />
-      <Text fontWeight="normal" y="30">
-        {element.name}
-      </Text>
+      {element.bounds.x === -1_000_000_000_000 && (
+        <Text fontWeight="normal" y="30">
+          {element.name}
+        </Text>
+      )}
     </g>
   );
 }

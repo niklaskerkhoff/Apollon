@@ -36,6 +36,7 @@ import { BPMNStartEventUpdate } from './bpmn/bpmn-start-event/bpmn-start-event-u
 import { BPMNEndEventUpdate } from './bpmn/bpmn-end-event/bpmn-end-event-update';
 import { BPMNTaskUpdate } from './bpmn/bpmn-task/bpmn-task-update';
 import { CfcNameWithCounterUpdate } from './cfc/base/cfc-name-with-counter-update';
+import { CfcOperationUpdate } from './cfc/cfc-operation/cfc-operation-update';
 
 export type Popups = { [key in UMLElementType | UMLRelationshipType]: ComponentType<{ element: any }> | null };
 export const Popups: { [key in UMLElementType | UMLRelationshipType]: ComponentType<{ element: any }> | null } = {
@@ -95,7 +96,7 @@ export const Popups: { [key in UMLElementType | UMLRelationshipType]: ComponentT
   [UMLElementType.BPMNPool]: BPMNPoolUpdate,
   [UMLElementType.BPMNSwimlane]: DefaultPopup,
   [UMLElementType.CfcInputOutput]: CfcNameWithCounterUpdate,
-  [UMLElementType.CfcOperation]: CfcNameWithCounterUpdate,
+  [UMLElementType.CfcOperation]: CfcOperationUpdate,
   [UMLElementType.CfcOperationRow]: null,
   [UMLElementType.CfcTransitionBranch]: null,
   // Relationships

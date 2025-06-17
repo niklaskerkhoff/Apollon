@@ -20,12 +20,14 @@ export function CfcOperationComponent({ element, children }: Props) {
 
   return (
     <g>
-      <ThemedRect width="100%" height="100%" strokeColor="none" />
-      <Text y={15}>{title}</Text>
+      <ThemedRect width="100%" height="100%" fillColor={element.fillColor} />
+      <Text y={15} fill={element.textColor}>
+        {title}
+      </Text>
       {children}
 
       {horizontalLines.map((y) => (
-        <ThemedLine key={y} x1={0} y1={y} x2={element.bounds.width} y2={y} stroke={element.strokeColor} />
+        <ThemedLine key={y} x1={0} y1={y} x2={element.bounds.width} y2={y} strokeColor={element.strokeColor} />
       ))}
 
       <ThemedRect fillColor="none" width="100%" height="100%" strokeColor={element.strokeColor} />

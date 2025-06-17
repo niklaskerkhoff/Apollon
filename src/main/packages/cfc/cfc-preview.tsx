@@ -19,19 +19,16 @@ export const composeCfcPreview: ComposePreview = (layer: ILayer, translate: (id:
   });
   cfcOperation.ownedElements = [cfcOperationRow.id];
 
-  const cfcOperationRowStandalone = new CfcOperationRow({
-    name: JSON.stringify({
-      inputLabel: 'in',
-      outputLabel: 'out',
-    }),
+  const cfcTransitionBranch = new CfcTransitionBranch({
+    name: 'Branch',
+    bounds: {
+      x: -1_000_000_000_000,
+    },
   });
-
-  const cfcTransitionBranch = new CfcTransitionBranch();
 
   return [
     ...(cfcInputOutput.render(layer) as UMLElement[]),
     ...(cfcOperation.render(layer, [cfcOperationRow]) as UMLElement[]),
-    ...(cfcOperationRowStandalone.render(layer) as UMLElement[]),
     ...(cfcTransitionBranch.render(layer) as UMLElement[]),
   ];
 };
