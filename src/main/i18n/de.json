@@ -171,6 +171,13 @@
       "BPMNSwimlane": "Bahn",
       "BPMNSwimlanes": "Bahnen",
       "BPMNGroup": "Gruppe"
+    },
+    "CFC": {
+      "Variable": "Variable",
+      "Operation": "Operation",
+      "in": "in",
+      "out": "out",
+      "Branch": "Verzweigung"
     }
   }
 }
