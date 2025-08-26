@@ -12,6 +12,7 @@ import { FlowchartElementType } from './flowchart';
 import { ColorLegendElementType } from './common/color-legend';
 import { ReachabilityGraphElementType } from './uml-reachability-graph';
 import { BPMNElementType } from './bpmn';
+import { SfcElementType } from './sfc';
 import { CfcElementType } from './cfc';
 
 export type UMLElementType =
@@ -27,6 +28,8 @@ export type UMLElementType =
   | keyof typeof SyntaxTreeElementType
   | keyof typeof FlowchartElementType
   | keyof typeof ColorLegendElementType
+  | keyof typeof BPMNElementType
+  | keyof typeof SfcElementType
   | keyof typeof BPMNElementType
   | keyof typeof CfcElementType;
 
@@ -44,6 +47,7 @@ export const UMLElementType = {
   ...FlowchartElementType,
   ...ColorLegendElementType,
   ...BPMNElementType,
+  ...SfcElementType,
   ...CfcElementType,
 };
 
@@ -61,6 +65,7 @@ export const UMLElementsForDiagram: { [key in UMLDiagramType]: any } = {
     [UMLDiagramType.SyntaxTree]: SyntaxTreeElementType,
     [UMLDiagramType.Flowchart]: FlowchartElementType,
     [UMLDiagramType.BPMN]: BPMNElementType,
+    [UMLDiagramType.Sfc]: SfcElementType,
     [UMLDiagramType.CFC]: CfcElementType,
   },
   ...ColorLegendElementType,

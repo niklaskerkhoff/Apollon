@@ -35,6 +35,9 @@ import { BPMNIntermediateEventUpdate } from './bpmn/bpmn-intermediate-event/bpmn
 import { BPMNStartEventUpdate } from './bpmn/bpmn-start-event/bpmn-start-event-update';
 import { BPMNEndEventUpdate } from './bpmn/bpmn-end-event/bpmn-end-event-update';
 import { BPMNTaskUpdate } from './bpmn/bpmn-task/bpmn-task-update';
+import { SfcTransitionUpdate } from './sfc/sfc-transition/sfc-transition-update';
+import { SfcActionTableUpdate } from './sfc/sfc-action-table/sfc-action-table-update';
+import { SfcNameUpdate } from './sfc/base/sfc-name-update';
 import { CfcNameWithCounterUpdate } from './cfc/base/cfc-name-with-counter-update';
 import { CfcOperationUpdate } from './cfc/cfc-operation/cfc-operation-update';
 
@@ -95,6 +98,13 @@ export const Popups: { [key in UMLElementType | UMLRelationshipType]: ComponentT
   [UMLElementType.BPMNGroup]: DefaultPopup,
   [UMLElementType.BPMNPool]: BPMNPoolUpdate,
   [UMLElementType.BPMNSwimlane]: DefaultPopup,
+  [UMLElementType.SfcStart]: null,
+  [UMLElementType.SfcStep]: SfcNameUpdate,
+  [UMLElementType.SfcActionTable]: SfcActionTableUpdate,
+  [UMLElementType.SfcActionTableRow]: null,
+  [UMLElementType.SfcTransitionBranch]: null,
+  [UMLElementType.SfcJump]: SfcNameUpdate,
+  [UMLElementType.SfcPreviewSpacer]: null,
   [UMLElementType.CfcInputOutput]: CfcNameWithCounterUpdate,
   [UMLElementType.CfcOperation]: CfcOperationUpdate,
   [UMLElementType.CfcOperationRow]: null,
@@ -126,5 +136,6 @@ export const Popups: { [key in UMLElementType | UMLRelationshipType]: ComponentT
   [UMLRelationshipType.SyntaxTreeLink]: DefaultRelationshipPopup,
   [UMLRelationshipType.FlowchartFlowline]: FlowchartFlowlineUpdate,
   [UMLRelationshipType.BPMNFlow]: BPMNFlowUpdate,
+  [UMLRelationshipType.SfcTransition]: SfcTransitionUpdate,
   [UMLRelationshipType.CfcTransition]: null,
 };
